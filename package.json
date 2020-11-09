@@ -1,0 +1,39 @@
+{
+  "name": "Portfolio-NyctibiusVII",
+  "version": "1.0.0",
+  "description": "Meu portfólio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NyctibiusVII/Portfolio-NyctibiusVII.git"
+  },
+  "keywords": [
+    "next",
+    "javascript",
+    "react",
+    "react-dom",
+    "portfólio",
+    "site",
+    "NyctibiusVII",
+    "Vercel",
+    "io"
+  ],
+  "author": {
+    "name": "Matheus Vidigal",
+    "username": "NyctibiusVII"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NyctibiusVII/Portfolio-NyctibiusVII/issues"
+  },
+  "homepage": "https://github.com/NyctibiusVII/Portfolio-NyctibiusVII#readme",
+  "dependencies": {
+    "next": "^10.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
