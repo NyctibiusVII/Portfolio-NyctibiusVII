@@ -104,7 +104,7 @@ const introduction = `Olá para quem está lendo, quem fala é um adolescente de
 Sou um desenvolvedor iniciante focado em web / mobile, atualmente estou estudando na Rocketseat sobre JS e SQL para aprimorar minhas skills, em meio a tudo isso desenvolvo meus projetos que podem ser visualizados na aba “/projects” ou no meu Github.
 `
 
-export default function Home() {
+const Home = ()=> {
     return (
         <Layout home>
             <Head>
@@ -128,3 +128,4 @@ export default function Home() {
         </Layout>
     )
 }
+export default Home
