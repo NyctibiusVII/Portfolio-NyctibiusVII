@@ -29,7 +29,7 @@ return (
             <li className={styles.li}><Link href="/contact" ><a className={styles.a}>Contact</a></Link></li>
           </ul>
         </nav>
-        <Link className={styles.button} href={github}><a className={styles.a}><button className={styles.button}>Github</button></a></Link>
+        <Link className={styles.button} target="_blank" href={github}><a className={styles.a}><button className={styles.button}>Github</button></a></Link>
       </header>
     </>
   )
