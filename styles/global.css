@@ -1,27 +1,64 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+
+  color: white;
+  background: #282b35;
+  font: 400 1.8rem/1 'Poppins', sans-serif;
+}
+
+
+
+header {
+  padding: 5px 25px;
+  background-color: #24252A !important;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header img,/*logo*/
+header nav,/*navigation*/
+header nav ul,/*nav. ul*/
+header nav ul li/*nav. ul li*/
+{
+  padding: 5px 0;
 }
 
 a {
-  color: #0070f3;
+  color: #0088a9;
   text-decoration: none;
 }
-
 a:hover {
-  text-decoration: underline;
+  color: #0088a9;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+
+
+/* Desktop version */
+@media (min-width: 600px) {
+  /* 760px para cima faz o que esta aqui dentro */
+  header {
+    padding: 10px 50px;
+    background-color: #24252A !important;
+  }
+  header,/*header*/
+  header img,/*logo*/
+  header nav,/*navigation*/
+  header nav ul,/*nav. ul*/
+  header nav ul li,/*nav. ul li*/
+  header a/*button*/
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

@@ -1,5 +1,10 @@
+import TopNav from '../components/top_nav.js'
+
 export default function Contact() {
     return (
-        <span class="badge badge-primary">contato</span>
+        <>
+            <TopNav></TopNav>
+            <span class="badge badge-primary">contato</span>
+        </>
     )
 }

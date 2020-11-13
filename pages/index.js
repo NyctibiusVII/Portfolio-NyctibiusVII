@@ -97,8 +97,10 @@
 
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout, { siteTitle } from '../components/layout'
+import TopNav from '../components/top_nav.js'
 import utilStyles from '../styles/utils.module.css'
+
+export const siteTitle = 'Portfólio'
 const introduction = `Olá para quem está lendo, quem fala é um adolescente de 18 anos, me chamo Matheus de Oliveira Vidigal Peixoto Dias e… sim meu nome é grande kk, moro em São Paulo e fiz um curso técnico em uma ong chamada ceap pedreira onde estudei muitas linguagens e tecnologias que hoje são minha base.
 
 Sou um desenvolvedor iniciante focado em web / mobile, atualmente estou estudando na Rocketseat sobre JS e SQL para aprimorar minhas skills, em meio a tudo isso desenvolvo meus projetos que podem ser visualizados na aba “/projects” ou no meu Github.
@@ -106,9 +108,11 @@ Sou um desenvolvedor iniciante focado em web / mobile, atualmente estou estudand
 
 const Home = ()=> {
     return (
-        <Layout home>
+        <>
+            <TopNav></TopNav>
             <Head>
                 <title>{siteTitle}</title>
+                <link rel="icon" href="../public/images/icons/logo_icon.svg" alt="icon"/>
             </Head>
             <section className={utilStyles.headingMd}>
                 <p>{introduction}</p>
@@ -117,15 +121,7 @@ const Home = ()=> {
                     <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
                 </p>
             </section>
-
-            <hr></hr>
-            <h1>Home</h1>
-            <h6>
-                <Link href="/404">
-                    <a>Ir para 404</a>
-                </Link>
-            </h6>
-        </Layout>
+        </>
     )
 }
 export default Home
