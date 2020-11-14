@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 
-
 .logo {
   cursor: pointer;
   margin-right: auto;
@@ -48,6 +47,31 @@ header .button:hover {
 }
 
 
+header .nav, .menu__nav__links{
+  animation-delay: 800ms;/* appear */
+}
+@keyframes up_to {
+  from {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+  }
+}
+header .li:hover {
+    animation-name: up_to;
+    animation-duration: 700ms;
+    animation-fill-mode: both;
+}
+
 
 /* Desktop version */
 @media (min-width: 600px) {
@@ -66,7 +90,7 @@ header .button:hover {
     -ms-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
   }
-  .nav__links .li .a:hover {}
+  /* .nav__links .li .a:hover {} */
   .menu__nav__links {
     visibility: hidden;
     height: 0;
@@ -102,12 +126,12 @@ header .button:hover {
     text-decoration: none;
   }
   /* The sub-navigation menu */
-  .subnav {
+  .sub__nav {
     float: left;
     overflow: hidden;
   }
-  /* Subnav button */
-  .subnav .subnavbtn {
+  /* sub__nav button */
+  .sub__nav .sub__nav__btn {
     font-size: 16px;
     border: none;
     outline: none;
@@ -118,10 +142,10 @@ header .button:hover {
     display: flex;
     margin-right: 20px;
   }
-  .menu__nav__links a:hover, .subnav:hover .subnavbtn {
+  .menu__nav__links a:hover, .sub__nav:hover .sub__nav__btn {
     background-color: #292a30;
   }
-  .subnav_content {
+  .sub__nav__content {
     display: none;
     position: absolute;
     left: 0;
@@ -129,16 +153,16 @@ header .button:hover {
     width: 100%;
     z-index: 1;
   }
-  .subnav_content a {
+  .sub__nav__content a {
     float: left;
     color: white;
     text-decoration: none;
   }
-  .subnav_content a:hover {
+  .sub__nav__content a:hover {
     background-color: #edf0f1;
     color: #24252A;
   }
-  .subnav:hover .subnav_content {
+  .sub__nav:hover .sub__nav__content {
     display: block;
   }
 }
