@@ -8,11 +8,13 @@
   font-size: 62.5%;
 }
 body {
-  height: 100vh;
-  
   color: white;
   background: #282b35;
   font: 400 1.8rem/1 'Poppins', sans-serif;
+}
+body, html {
+  width: 100vw;
+  height: 100vh;
 }
 
 

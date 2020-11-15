@@ -3,7 +3,7 @@ import animations from '../styles/animations.module.css'
 import Link       from 'next/link'
 
 const __varGlobal = require('../assets/variablesJS')
-const srcLogo     = __varGlobal.srcLinks.__Logo,
+const srcLogo     = __varGlobal.srcLinks.__LogoIcon,
       srcHome     = __varGlobal.srcLinks.__Home,
       srcProjects = __varGlobal.srcLinks.__Projects,
       srcAbout    = __varGlobal.srcLinks.__About,

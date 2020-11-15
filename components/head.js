@@ -16,7 +16,7 @@ const icon        = __varGlobal.srcLinks.__SiteMiniLogoIcon
 export default function HeadCompacted() {
 return (
     <Head>
-        <meta charset="utf-8"/>
+        <meta charSet="utf-8"/>
         <meta http-equiv="content-language" content="pt-br, en-US"/>
         <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
         <meta http-equiv="pragma" content="no-cache"/>

@@ -10,7 +10,6 @@ exports.variablesGlobal = {
     Sou um desenvolvedor iniciante focado em web / mobile, atualmente estou estudando na Rocketseat sobre JS e SQL para aprimorar minhas skills, em meio a tudo isso desenvolvo meus projetos que podem ser visualizados na aba “/projects” ou no meu Github.
     `,
 }
-const pathIcons = '../public/icons/'
 exports.srcLinks = {
     //Pages
     __Home     : '/',
@@ -18,10 +17,22 @@ exports.srcLinks = {
     __About    : '/about',
     __Contact  : '/contact',
     //Logo
-    __Logo              : pathIcons+'logo'                +'.png',
-    __LogoIcon          : pathIcons+'logo-icon'           +'.png',
-    __MiniLogoIcon      : pathIcons+'mini-logo-icon'      +'.png',
-    __SiteMiniLogoIcon  : pathIcons+'site-mini-logo-icon' +'.png',
+    __Logo              : '/logo'                +'.png',
+    __LogoIcon          : '/logo-icon'           +'.png',
+    __MiniLogoIcon      : '/mini-logo-icon'      +'.png',
+    __SiteMiniLogoIcon  : '/site-mini-logo-icon' +'.png',
+    __Logo404           : '/logo-404'            +'.png',
+    //icons redeS
+    __github          : '/github.svg',
+    __linkedin        : '/linkedin.svg',
+    __rocketseat      : '/rocketseat.svg',
+    __stack_overflow  : '/stack_overflow.svg',
+    __instagram       : '/instagram.svg',
+    __instagram_design: '/instagram_design.svg',
+    __twitter         : '/twitter.svg',
+    __discord         : '/discord.svg',
+    __email_dev       : '/email.svg',
+    __donate          : '/donate.svg', // - Picpay
 }
 //const https = 'https://'
 exports.links = {
