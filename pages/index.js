@@ -94,32 +94,25 @@
 //
 //export default Index
 
+import TopNav           from '../components/top_nav.js'
+import HeadCompacted    from '../components/head.js'
+import Link         from 'next/link'
+import utilStyles   from '../styles/utils.module.css'
 
-import Head from 'next/head'
-import Link from 'next/link'
-import TopNav from '../components/top_nav.js'
-import utilStyles from '../styles/utils.module.css'
-
-export const siteTitle = 'Portfólio'
-const introduction = `Olá para quem está lendo, quem fala é um adolescente de 18 anos, me chamo Matheus de Oliveira Vidigal Peixoto Dias e… sim meu nome é grande kk, moro em São Paulo e fiz um curso técnico em uma ong chamada ceap pedreira onde estudei muitas linguagens e tecnologias que hoje são minha base.
-
-Sou um desenvolvedor iniciante focado em web / mobile, atualmente estou estudando na Rocketseat sobre JS e SQL para aprimorar minhas skills, em meio a tudo isso desenvolvo meus projetos que podem ser visualizados na aba “/projects” ou no meu Github.
-`
+const __varGlobal   = require('../assets/variablesJS')
+const title         = __varGlobal.variablesGlobal.siteTitle
+const icon          = __varGlobal.variablesGlobal.siteTitle
+const introduction  = __varGlobal.variablesGlobal.introduction
 
 const Home = ()=> {
     return (
         <>
-            <TopNav></TopNav>
-            <Head>
-                <title>{siteTitle}</title>
-                <link rel="icon" href="../public/images/icons/logo_icon.svg" alt="icon"/>
-            </Head>
+            <TopNav/>
+            <HeadCompacted/>
+
             <section className={utilStyles.headingMd}>
                 <p>{introduction}</p>
-                <p>
-                    (This is a sample website - you’ll be building a site like this on{' '}
-                    <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-                </p>
+                <p>(This is a sample website - you’ll be building a site like this on{' '}<a href="https://nextjs.org/learn">our Next.js tutorial</a>.)</p>
             </section>
         </>
     )

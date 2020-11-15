@@ -1,10 +1,12 @@
-import TopNav from '../components/top_nav.js'
+import HeadCompacted    from '../components/head.js'
+import TopNav           from '../components/top_nav.js'
 
 export default function About() {
     return (
         <>
-            <TopNav></TopNav>
-            <span class="badge badge-primary">sobre</span>
+            <TopNav/>
+            <HeadCompacted/>
+            <span>sobre</span>
         </>
     )
 }

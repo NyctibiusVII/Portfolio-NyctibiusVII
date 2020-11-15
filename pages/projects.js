@@ -1,10 +1,12 @@
-import TopNav from '../components/top_nav.js'
+import HeadCompacted    from '../components/head.js'
+import TopNav           from '../components/top_nav.js'
 
 export default function Projects() {
     return (
         <>
-            <TopNav></TopNav>
-            <span class="badge badge-primary">projetos</span>
+            <TopNav/>
+            <HeadCompacted/>
+            <span>projetos</span>
         </>
     )
 }

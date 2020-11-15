@@ -1,23 +1,24 @@
+import HeadCompacted    from '../components/head.js'
+import TopNav           from '../components/top_nav.js'
+import Link       from 'next/link'
+
+import styles     from '../styles/404.module.css'
 import animations from '../styles/animations.module.css'
-import Head from 'next/head'
-import Link from 'next/link'
+
+const __varGlobal = require('../assets/variablesJS')
+const title       = __varGlobal.variablesGlobal.siteTitle
+const emailName   = 'mathueus.dev.07@gmail.com'
+const email       = __varGlobal.links.email_dev
+const githubName  = 'Github'
+const github      = __varGlobal.links.github
 
 export default function FirstPost() {
   return (
     <>
-        <Head>
-            <title>NyctibiusVII</title>
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <div className={animations.loader}></div>
+        <TopNav/>
+        <HeadCompacted/>
 
-        <div>
-          <h1>404</h1>
-          <h5>page not found</h5>
-        </div>
-        <div>
-          <img src="../public/images/404.png" alt="ERROR 404 __image" className="__404" />
-        </div>
+        
     </>
   )
 }
