@@ -23,16 +23,18 @@ const linkedin          = __varGlobal.links.linkedin,
 //links src
 const ICON__linkedin          = __varGlobal.srcLinks.__linkedin,
       ICON__rocketseat        = __varGlobal.srcLinks.__rocketseat,
-      ICON__stack_overflow    = __varGlobal.srcLinks.__stack_overflow,
+      ICON__stack_overflow    = __varGlobal.srcLinks.__stack_overflow,    // - Not used
       ICON__instagram         = __varGlobal.srcLinks.__instagram,
-      ICON__instagram_design  = __varGlobal.srcLinks.__instagram_design,
+      ICON__instagram_design  = __varGlobal.srcLinks.__instagram_design,  // - Not used
       ICON__twitter           = __varGlobal.srcLinks.__twitter,
       ICON__discord           = __varGlobal.srcLinks.__discord,
       ICON__donate            = __varGlobal.srcLinks.__donate,
-      ICON__email_dev         = __varGlobal.srcLinks.__email_dev, // - Not used
-      ICON__github            = __varGlobal.srcLinks.__github     // - Not used
+      ICON__email_dev         = __varGlobal.srcLinks.__email_dev,         // - Not used
+      ICON__github            = __varGlobal.srcLinks.__github
 
+const author                  = __varGlobal.variablesGlobal.author
 const nickname                = __varGlobal.variablesGlobal.nickname
+const tel                     = __varGlobal.variablesGlobal.tel
 const logo404                 = __varGlobal.srcLinks.__Logo404
 const miniLogoIcon            = __varGlobal.srcLinks.__MiniLogoIcon
 
@@ -53,7 +55,7 @@ export default function FirstPost() {
         <div className="div__centralize">
             <div className="div__between">
                 <div className="div__top">
-                  <img src={logo404} alt="404: Page Not Found" width="16" height="16"/>
+                  <img src={logo404} alt="404: Page Not Found"/>
                   <h6>this page does not exist.</h6>
                 </div>
 
@@ -63,24 +65,24 @@ export default function FirstPost() {
                       <tbody>
                         <tr>
                           <td className={styles.td__logo} rowSpan="2"><img src={miniLogoIcon} alt="mini-logo-icon" width={iconSize} height={iconSize}/></td>
-                          <td><h6>@{nickname}</h6></td>
+                          <td><h6>{author}</h6></td>
+                          <td><h6><Link href={email_dev}target="_blank"><a>{emailName}</a></Link></h6></td>
                         </tr>
                         <tr>
-                          <td><h6><Link href={github}   target="_blank"><a>{githubName}</a></Link></h6></td>
-                          <td><h6><Link href={email_dev}target="_blank"><a>{emailName} </a></Link></h6></td>
+                          <td><h6>@{nickname}</h6></td>
+                          <td><h6>{tel}</h6></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
 
                   <div className={styles.div__icons}>
+                    <Link href={github}          target="_blank"><a className={styles.a}><img src={ICON__github}          alt="icon-github"          width={iconSize} height={iconSize}/></a></Link>
                     <Link href={linkedin}        target="_blank"><a className={styles.a}><img src={ICON__linkedin}        alt="icon-linkedin"        width={iconSize} height={iconSize}/></a></Link>
-                    <Link href={rocketseat}      target="_blank"><a className={styles.a}><img src={ICON__rocketseat}      alt="icon-rocketseat"      width={iconSize} height={iconSize}/></a></Link>
-                    <Link href={stack_overflow}  target="_blank"><a className={styles.a}><img src={ICON__stack_overflow}  alt="icon-stack_overflow"  width={iconSize} height={iconSize}/></a></Link>
                     <Link href={instagram}       target="_blank"><a className={styles.a}><img src={ICON__instagram}       alt="icon-instagram"       width={iconSize} height={iconSize}/></a></Link>
-                    <Link href={instagram_design}target="_blank"><a className={styles.a}><img src={ICON__instagram_design}alt="icon-instagram_design"width={iconSize} height={iconSize}/></a></Link>
-                    <Link href={twitter}         target="_blank"><a className={styles.a}><img src={ICON__twitter}         alt="icon-twitter"         width={iconSize} height={iconSize}/></a></Link>
                     <Link href={discord}         target="_blank"><a className={styles.a}><img src={ICON__discord}         alt="icon-discord"         width={iconSize} height={iconSize}/></a></Link>
+                    <Link href={twitter}         target="_blank"><a className={styles.a}><img src={ICON__twitter}         alt="icon-twitter"         width={iconSize} height={iconSize}/></a></Link>
+                    <Link href={rocketseat}      target="_blank"><a className={styles.a}><img src={ICON__rocketseat}      alt="icon-rocketseat"      width={iconSize} height={iconSize}/></a></Link>
                     <Link href={donate}          target="_blank"><a className={styles.a}><img src={ICON__donate}          alt="icon-donate"          width={iconSize} height={iconSize}/></a></Link>
                   </div>
                 </div>

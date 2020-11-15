@@ -4,6 +4,7 @@ exports.variablesGlobal = {
     siteTitleDesc   : 'Meu portfólio - (NyctibiusVII)',
     author          : 'Matheus Vidigal',
     nickname        : 'NyctibiusVII',
+    tel             : '(11)97132-1587',
     description     : 'Este site foi criado por mim para a criação do meu portfólio, nele tenho o intuito de mostrar mais o meu lado profissional e minha disciplina com a programação.',
     introduction    : `Olá para quem está lendo, quem fala é um adolescente de 18 anos, me chamo Matheus de Oliveira Vidigal Peixoto Dias e… sim meu nome é grande kk, moro em São Paulo e fiz um curso técnico em uma ong chamada ceap pedreira onde estudei muitas linguagens e tecnologias que hoje são minha base.
 
@@ -25,7 +26,7 @@ exports.srcLinks = {
     //icons redeS
     __github          : '/github.svg',
     __linkedin        : '/linkedin.svg',
-    __rocketseat      : '/rocketseat.svg',
+    __rocketseat      : '/rocketseat.png',
     __stack_overflow  : '/stack_overflow.svg',
     __instagram       : '/instagram.svg',
     __instagram_design: '/instagram_design.svg',
