@@ -38,6 +38,7 @@
 
   /*PADRÃO*/
   --color-text-white: #ffffff;
+  --color-text-ghost: #ffffffcc;
   --color-text-black: #000000;
 
   --color-error-light:#e57373;
@@ -86,8 +87,8 @@
 }
 body {
   color: white;
-  /*background: var(--color-background);*/
-  background: linear-gradient(180deg, var(--color-background) 99%, var(--color-primary) 100%) no-repeat;
+  background: var(--color-background);
+  /*background: linear-gradient(180deg, var(--color-background) 99%, var(--color-primary) 100%) no-repeat;*/
   font: 400 1.8rem/1 'Poppins', sans-serif;
 }
 body, html {

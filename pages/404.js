@@ -1,4 +1,5 @@
 import TopNav           from '../components/TopNav'
+import FooterSimple     from '../components/FooterSimple'
 
 import Image            from 'next/image'
 import Link             from 'next/link'
@@ -6,7 +7,8 @@ import Link             from 'next/link'
 import styles     from '../styles/404.module.css'
 import animations from '../styles/animations.module.css'
 
-const iconSize = '32'
+const iconSize = '20'
+const iconSize_L = '40'
 const __varGlobal = require('../assets/variablesJS')
 //links https
 const linkedin          = __varGlobal.links.linkedin,
@@ -41,39 +43,42 @@ const miniLogoIcon            = __varGlobal.srcLinks.__MiniLogoIcon
 
 const backgroundImage = '../background-404.png'
 const divBackgroundStyle = {
-  width: '100%',
-  height: '100%',
+  width: '100vw',
+  height: '90vh',
   backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
 }
 const div100 = {
-  width: '100vw'
+  width: '100%'
 }
 
 export default function FirstPost() {
   return (
     <>
-    <TopNav/>
+      <TopNav/>
       <div className={styles.div__background} style={divBackgroundStyle} layout='fill'>
-        <div className="div__centralize">
-            <div className="div__between">
-                <div className="div__top" style={div100}>
-                  <Image src={logo404} width={902} height={150} alt="404: Page Not Found"/>
-                  <p className={styles.p__subtitle}>this page does not exist.</p>
+        <div className={styles.div__centralize}>
+            <div className={styles.div__between}>
+                <div className={styles.div__top} style={div100}>
+                  <div className={styles.title__desktop__image}>
+                    <Image src={logo404} width={902} height={150} alt="404: Page Not Found"/>
+                  </div>
+                  <p className={styles.title__mobile}>404: Page Not Found</p>
+                  <p className={styles.p__subtitle}>This page does not exist.</p>
                 </div>
 
-                <div className="div__bottom div__bottom__flex__between">
-                  <div>
+                <div className={styles.div__bottom}>
+                  <div className={styles.div__table}>
                     <table>
                       <tbody>
                         <tr>
-                          <td className={styles.td__logo} rowSpan="2"><Image src={miniLogoIcon} width={iconSize} height={iconSize} alt="mini-logo-icon"/></td>
-                          <td><h6>{author}</h6></td>
-                          <td><h6><Link href={email_dev}target="_blank"><a>{emailName}</a></Link></h6></td>
+                          <td className={styles.td} rowSpan="2"><Image src={miniLogoIcon} width={iconSize_L} height={iconSize_L} alt="mini-logo-icon"/></td>
+                          <td className={styles.td}><p>{author}</p></td>
+                          <td className={styles.td}><p><Link href={email_dev}target="_blank"><a className={styles.table__email}>{emailName}</a></Link></p></td>
                         </tr>
                         <tr>
-                          <td><h6>@{nickname}</h6></td>
-                          <td><h6>{tel}</h6></td>
+                          <td className={styles.td}><p>@{nickname}</p></td>
+                          <td className={styles.td}><p>{tel}</p></td>
                         </tr>
                       </tbody>
                     </table>
@@ -95,3 +100,4 @@ export default function FirstPost() {
     </>
   )
 }
+//<FooterSimple/>

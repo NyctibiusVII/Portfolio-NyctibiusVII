@@ -1,4 +1,5 @@
 import styles     from './top_nav.module.css'
+import gl2        from '../../styles/gl2.module.css'
 import animations from '../../styles/animations.module.css'
 import Link       from 'next/link'
 
@@ -19,8 +20,9 @@ const divStyle = {
 export default function TopNav() {
   return (
     <>
-      <header className={[styles.header, animations.animate_down].join(' ')}>
-        <img className={styles.logo} src={srcLogo} width={logoSize} height={logoSize} alt="LOGO"  />
+      <header className={[gl2.div__centralize__tpnv, styles.header, animations.animate_down].join(' ')}>
+        <Link href={srcHome}><a><img className={styles.logo} title="Go to Home Page" src={srcLogo} width={logoSize} height={logoSize} alt="LOGO"/></a></Link>
+
         <div className={styles.div__center}>
 
           <div className={[styles.nav__menu, animations.animate_appear].join(' ')}>
@@ -45,10 +47,33 @@ export default function TopNav() {
           </nav>
 
           <div className={styles.div__button}>
-            <Link className={styles.button} href={github}><a className={styles.a} target="_blank"><button className={[styles.button, animations.animate_appear].join(' ')}>Github</button></a></Link>
+            <Link className={styles.button} href={github}>
+              <a className={styles.a} target="_blank">
+                <button className={[styles.button, animations.animate_appear].join(' ')}>Github</button>
+              </a>
+            </Link>
           </div>
         </div>
       </header>
     </>
   )
+  /* - LUA
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  */
+
+  /* - SOL
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+  */
 }
