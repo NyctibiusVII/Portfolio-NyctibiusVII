@@ -94,8 +94,7 @@
 //
 //export default Index
 
-import TopNav           from '../components/top_nav.js'
-import HeadCompacted    from '../components/head.js'
+import TopNav           from '../components/TopNav'
 import Link         from 'next/link'
 import utilStyles   from '../styles/utils.module.css'
 
@@ -108,7 +107,6 @@ const Home = ()=> {
     return (
         <>
             <TopNav/>
-            <HeadCompacted/>
 
             <section className={utilStyles.headingMd}>
                 <p>{introduction}</p>

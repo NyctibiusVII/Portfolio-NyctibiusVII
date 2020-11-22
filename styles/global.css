@@ -1,15 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 :root {
   font-size: 62.5%;
+  
+  /* -Tertiary-
+   %___RED-ORANGE
+   %___RED-VIOLET
+   %___BLUE-GREEN
+  */
+
+  /*TOP-NAV*/
+  --topBar-nav-color-background-light: #25252E;
+  --topBar-nav-color-background: #24242B;/**23232B */
+  --topBar-nav-color-background-dark: #212129;
+
+  --subsub-topBar-nav-color-background: #1F1F27;/**1F1F27 */
+  --subsub-topBar-nav-color-background-secondary: #eeeeee;
+
+  /*BACKGROUND*/
+  --color-background-light: #1D1D24;
+  --color-background: #1B1B21;/**1B1B22 */
+  --color-background-dark: #16161C;
+
+  --color-primary-light: #FF4108;
+  --color-primary: #ff5722;
+  --color-primary-dark: #E64C1E;
+  --color-primary-other: #FF3C22;
+
+  --color-secondary-light: #ff6bf8;
+  --color-secondary: #FF0059;
+  --color-secondary-dark: #ff6bf8;
+  --color-secondary-other: #000059;
+
+  --color-primary-hard-light: #FF3307;
+  --color-primary-hard: #ff2a00;
+  --color-primary-hard-dark: #F82100;
+
+  /*PADRÃO*/
+  --color-text-white: #ffffff;
+  --color-text-black: #000000;
+
+  --color-error-light:#e57373;
+  --color-error-main: #f44336;
+  --color-error-dark: #d32f2f;
+
+  --color-warning-light: #ffb74d;
+  --color-warning-main: #ff9800;
+  --color-warning-dark: #f57c00;
+
+  --color-info-light: #64b5f6;
+  --color-info-main: #2196f3;
+  --color-info-dark: #1976d2;
+
+  --color-success-light: #81c784;
+  --color-success-main: #4caf50;
+  --color-success-dark: #388e3c;
+
+  /*--color-primary-lighter: #ff2600;
+  --color-primary-light: #3b3c46;
+  --color-primary: #282a36;
+  --color-primary-dark: #7bc7ff;
+  --color-primary-darker: #4dacff;
+  --color-secondary: #c401a3;
+  --color-secondary-dark: #a00185;
+  --color-title-in-primary: #FFFFFF;
+  --color-text-in-primary: #cbc2ff;
+  --color-text-title: #89179e;
+  --color-text-complement: #bd86c7;
+  --color-text-base: #666180;
+  --color-line-in-white: #E6E6F0;
+  --color-input-background: #f9f8fc;
+  --color-box-base: #FFFFFF;
+  --color-box-footer: #f1f1f1;
+  --color-small-info: #C1BCCC;
+  */
+}
+
+
+
+/* ----------------------GERAL(padrão)-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   color: white;
-  background: #282b35;
+  /*background: var(--color-background);*/
+  background: linear-gradient(180deg, var(--color-background) 99%, var(--color-primary) 100%) no-repeat;
   font: 400 1.8rem/1 'Poppins', sans-serif;
 }
 body, html {
@@ -17,50 +95,19 @@ body, html {
   height: 100vh;
 }
 
-
-
-header {
-  padding: 5px 25px;
-  background-color: #24252A !important;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-header img,/*logo*/
-header nav,/*navigation*/
-header nav ul,/*nav. ul*/
-header nav ul li/*nav. ul li*/
-{
-  padding: 5px 0;
-}
-
+/* DETALHES ---------------------------------------------- */
+/* link */
 a {
-  color: #0088a9;
+  color: var(--color-primary);
   text-decoration: none;
 }
 a:hover {
-  color: #0088a9;
+  color: var(--color-primary-dark);
 }
 
-
-
-/* Desktop version */
-@media (min-width: 600px) {
-  /* 760px para cima faz o que esta aqui dentro */
-  header {
-    padding: 10px 50px;
-    background-color: #24252A !important;
-  }
-  header,/*header*/
-  header img,/*logo*/
-  header nav,/*navigation*/
-  header nav ul,/*nav. ul*/
-  header nav ul li,/*nav. ul li*/
-  header a/*button*/
-  {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* tablet ------------------------------------------------ */
+@media (min-width: 700px){
+  :root{
+      font-size: 62.5%;
   }
 }

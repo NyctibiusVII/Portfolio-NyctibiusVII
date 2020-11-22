@@ -4,6 +4,7 @@
 .logo {
   cursor: pointer;
   margin-right: auto;
+  padding: 0;
 }
 
 header .button{
@@ -27,6 +28,11 @@ header .button{
 }
 header .button:hover {
   background-color: rgb(0, 136, 169,0.8);
+}
+header .button .a {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .li, .a, header .button {
@@ -72,15 +78,18 @@ header .li:hover {
     animation-fill-mode: both;
 }
 
-
 /* Desktop version */
 @media (min-width: 600px) {
+  .logo {
+    width: 100px;
+    height: auto;
+  }
   .nav__links {
     width: 100%;
     list-style: none;
   }
   .nav__links .li {
-    padding: clamp(10px, 20px, 25px);
+    padding: clamp(5px, 10px, 15px);
     /*       clamp(min, ideal, max) */
   }
   .nav__links .li .a {
@@ -103,6 +112,11 @@ header .li:hover {
   }
 }
 @media (max-width: 600px) {
+  .logo {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
   .nav__links {
     visibility: hidden;
     height: 0;
@@ -112,7 +126,7 @@ header .li:hover {
     margin-left: 0;
   }
 
-  /* The navigation menu */
+  /* THE MENU */
   .menu__nav__links {
     overflow: hidden;
   }

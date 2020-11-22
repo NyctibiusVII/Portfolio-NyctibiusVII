@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.header {
+  background-color: var(--topBar-nav-color-background) !important;
+  display: flex;
+  justify-content: space-between;/* separa itens */
+  align-items: center;
+}
+.header .div__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.header .logo {
+  cursor: pointer;
+}
+
+
+
+.header .div__center .div__button .button{
+  color: white;
+  margin-left: 1em;
+  padding: 10px 25px;/* espaço dentro do button */
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: none;
+
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.header .div__center .div__button .button:hover {
+  background-color: var(--color-primary-dark);
+}
+.header .div__center .nav .nav__links {
+  display: flex;
+  list-style: none;
+}
+.header .div__center .nav .nav__links .li {
+  padding: clamp(5px, 10px, 15px);
+}
+.header .div__center .nav .nav__links .li .a {
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.header .div__center .nav .nav__links .li,
+.header .div__center .nav .nav__links .li .a,
+.header .div__center .div__button .button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: clamp(10px, 16px, 20px);
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* Animations */
+@keyframes up_to {
+  from {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+  }
+}
+/* aparição */
+.header .div__center .nav,
+.header .div__center .nav__menu{
+  animation-delay: 800ms;
+}
+/* up to */
+.header .div__center .nav .nav__links .li:hover {
+  animation-name: up_to;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+
+
+
+/* THE MENU */
+.header .div__center .nav__menu {
+  overflow: hidden;
+}
+/* ----->sub nav menu */
+.header .div__center .nav__menu .sub__nav__menu {
+  float: left;
+  overflow: hidden;
+}
+/* ----->subsub nav Button */
+.header .div__center .nav__menu .sub__nav__menu .subsub__nav__btn {
+  background-color: inherit;
+  border: none;
+  color: var(--color-text-white);
+  font-family: inherit;
+  font-size: 1.6rem;
+  outline: none;
+
+  display: flex;
+  padding: 14px 1rem;
+}
+.header .div__center .nav__menu:hover .subsub__nav__btn {
+  background-color: var(--subsub-topBar-nav-color-background);
+}
+/* ----->subsub nav links Content */
+.header .div__center .nav__menu .sub__nav__menu .subsub__nav__links__content {
+  background-color: var(--subsub-topBar-nav-color-background);
+  display: none;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+/* ----->links */
+.header .div__center .nav__menu .sub__nav__menu .subsub__nav__links__content .a {
+  color: var(--color-text-white);
+  float: left;
+  font-size: 16px;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+.header .div__center .nav__menu .sub__nav__menu .subsub__nav__links__content .a:hover {
+  background-color: var(--subsub-topBar-nav-color-background-secondary);
+  color: var(--topBar-nav-color-background);
+}
+.header .div__center .nav__menu .sub__nav__menu .subsub__nav__btn:focus + .subsub__nav__links__content,
+.header .div__center .nav__menu:hover .subsub__nav__links__content {
+  display: block;
+}
+
+
+
+/* De 600 para CIMA^ *//* Desktop version 14px 16px*/
+@media (min-width: 600px) {
+  /* ESCONDE ###-MENU-### */
+  .header .div__center .nav__menu {
+    display: none;/* remove conteúdo */
+    visibility: hidden;/* invisível */
+  }
+  /* -------------------- */
+}
+
+
+
+/* De 320 á 599 *//* Mobile version */
+@media (max-width: 599px) {
+  /* ESCONDE ###-NAV-### */
+  .header .div__center .nav,
+  .header .div__center .div__button {
+    display: none;/* remove conteúdo */
+    visibility: hidden;/* invisível */
+  }
+  /* -------------------- */
+}
+
+
+
+/* De 0 á 360 *//* --Mobile version */
+@media (max-width: 360px) {
+  /* DIMINUE ###-a-### */
+  .header .div__center .nav__menu .sub__nav__menu .subsub__nav__links__content .a {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  /* -------------------- */
+}
