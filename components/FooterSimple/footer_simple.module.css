@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap');
+
+.footer {
+    color: var(--footer-text-color-background);
+    background-color: var(--footer-color-background);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-grow: 0;
+    align-self: center;
+}
+.footer .p {
+    font: 500 1rem/1 'Rubik', sans-serif;
+    padding: .7rem 0;
+}

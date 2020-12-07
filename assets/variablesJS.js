@@ -5,6 +5,7 @@ exports.variablesGlobal = {
     author        : 'Matheus Vidigal',
     nickname      : 'NyctibiusVII',
     tel           : '(11) 97132-1587',
+    copyright     : 'copyright © 2020 Matheus Vidigal - @NyctibiusVII',
     description   : 'Este site foi criado por mim para a criação do meu portfólio, nele tenho o intuito de mostrar mais o meu lado profissional e minha disciplina com a programação.',
     introduction  : `Olá para quem está lendo, quem fala é um adolescente de 18 anos, me chamo Matheus de Oliveira Vidigal Peixoto Dias e… sim meu nome é grande kk, moro em São Paulo e fiz um curso técnico em uma ong chamada ceap pedreira onde estudei muitas linguagens e tecnologias que hoje são minha base.
 
