@@ -12,10 +12,6 @@ const srcLogo     = __varGlobal.srcLinks.__LogoIcon,
       srcContact  = __varGlobal.srcLinks.__Contact
 
 const github      = __varGlobal.links.github
-const divStyle = {
-  width: '100%',
-  height: '45px'
-}
 
 export default function TopNav() {
   return (
