@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Redressed&display=swap');
+
+.bodyNewBackground {
+    background-color: var(--color-primary) !important;
+}
+
+
+.centralizeContent {
+    height: 90vh;
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.centralizeContent div {
+    margin: 10px;
+}
+.centralizeContent div img {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.div__icons img{
+    margin: 0 5px 0;
+}
+
+
+
+.centralizeContent div.divMyName {
+    margin-bottom: 40px;
+
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+}
+.centralizeContent div span.myName {
+    font: 400 4rem/1 'Redressed', sans-serif;
+}
+
+
+.centralizeContent div.divProfession span.profession {
+    font: 400 1.8rem/1 'Inconsolata', sans-serif;
+}

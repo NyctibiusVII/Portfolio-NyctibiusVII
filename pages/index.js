@@ -1,117 +1,54 @@
-//import React from 'react'
-//import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core'
-//
-//import Timeline from '../components/Timeline'
-//import Container from '../components/Container'
-//import BlogPost from '../components/BlogPost'
-//import Subscribe from '../components/Subscribe'
-//import ProjectCard from '../components/ProjectCard'
-//
-//import { frontMatter as styleGuides } from './blog/style-guides-component-libraries-design-systems.mdx'
-//import { frontMatter as stripeDesign } from './blog/how-stripe-designs-beautiful-websites.mdx'
-//import { frontMatter as monorepo } from './blog/monorepo-lerna-yarn-workspaces.mdx'
-//
-//const Index = () => {
-//  const { colorMode } = useColorMode();
-//  const secondaryTextColor = {
-//    light: 'gray.700',
-//    dark: 'gray.400'
-//  }
-//
-//  return (
-//    <Container>
-//      <Stack
-//        as="main"
-//        spacing={8}
-//        justifyContent="center"
-//        alignItems="flex-start"
-//        m="0 auto 4rem auto"
-//        maxWidth="700px"
-//      >
-//        <Flex
-//          flexDirection="column"
-//          justifyContent="flex-start"
-//          alignItems="flex-start"
-//          maxWidth="700px"
-//        >
-//          <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-//            Hey, I’m Lee Robinson
-//          </Heading>
-//          <Text color={secondaryTextColor[colorMode]}>
-//            I’m a developer, writer, and creator. I work at ▲Vercel as a
-//            Solutions Architect. You’ve found my personal slice of the internet
-//            – everything you want to know and more is here.
-//          </Text>
-//        </Flex>
-//        <Flex
-//          flexDirection="column"
-//          justifyContent="flex-start"
-//          alignItems="flex-start"
-//          maxWidth="700px"
-//          mt={8}
-//        >
-//          <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
-//            Most Popular
-//          </Heading>
-//          <BlogPost {...styleGuides} />
-//          <BlogPost {...stripeDesign} />
-//          <BlogPost {...monorepo} />
-//        </Flex>
-//        <Flex
-//          flexDirection="column"
-//          justifyContent="flex-start"
-//          alignItems="flex-start"
-//          maxWidth="700px"
-//        >
-//          <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
-//            Projects
-//          </Heading>
-//          <ProjectCard
-//            title="React 2025"
-//            description="Build and deploy a modern Jamstack application using the most popular open-source software."
-//            href="https://react2025.com/"
-//            icon="react2025"
-//          />
-//          <ProjectCard
-//            title="Mastering Next.js"
-//            description="A free video course for building static and server-side rendered applications with Next.js and React."
-//            href="https://masteringnextjs.com/"
-//            icon="nextjs"
-//          />
-//          <ProjectCard
-//            title="jamstackfns"
-//            description="The best serverless functions for JAMstack applications. Deploy to Vercel or Netlify for your static site."
-//            href="https://jamstackfns.com/"
-//            icon="jamstackfns"
-//          />
-//        </Flex>
-//        <Timeline />
-//        <Subscribe />
-//      </Stack>
-//    </Container>
-//  )
-//}
-//
-//export default Index
+import TopNavCustom from '../components/TopNavCustom'
 
-import TopNav           from '../components/TopNav'
+import styles       from '../styles/index.module.css'
+import animations   from '../styles/animations.module.css'
+import Image        from 'next/image'
 import Link         from 'next/link'
-import utilStyles   from '../styles/utils.module.css'
 
+const imgSize       = 200
+const iconSize      = '10'
 const __varGlobal   = require('../assets/variablesJS')
-const title         = __varGlobal.variablesGlobal.siteTitle
-const icon          = __varGlobal.variablesGlobal.siteTitle
-const introduction  = __varGlobal.variablesGlobal.introduction
+const authorPlusNickName = __varGlobal.variablesGlobal.authorPlusNickName
+
+const srcImgProfile = __varGlobal.srcLinks.__ImgProfile,
+      srcAbout      = __varGlobal.srcLinks.__About
+//links https
+const linkedin          = __varGlobal.links.linkedin,
+      instagram         = __varGlobal.links.instagram,
+      twitter           = __varGlobal.links.twitter,
+      github            = __varGlobal.links.github
+//links src
+const ICON__linkedin    = __varGlobal.srcLinks.__linkedinSimple,
+ICON__instagram         = __varGlobal.srcLinks.__instagramSimple,
+ICON__twitter           = __varGlobal.srcLinks.__twitterSimple,
+ICON__github            = __varGlobal.srcLinks.__githubSimple
 
 const Home = ()=> {
     return (
         <>
-            <TopNav/>
+            <TopNavCustom/>
 
-            <section className={utilStyles.headingMd}>
-                <p>{introduction}</p>
-                <p>(This is a sample website - you’ll be building a site like this on{' '}<a href="https://nextjs.org/learn">our Next.js tutorial</a>.)</p>
-            </section>
+            <div className={styles.bodyNewBackground}>
+                <div className={styles.centralizeContent}>
+                    <div className={styles.imgPerf}>
+                        <Link href={srcAbout}><a><img className={styles.imgProfile} title="Go to About Page" src={srcImgProfile} width={imgSize} height={imgSize} alt="profile image"/></a></Link>
+                    </div>
+                    <div className={styles.divMyName}>
+                        <span className={styles.myName}>- {authorPlusNickName} -</span>
+                    </div>
+                    <div className={styles.divProfession}>
+                        <span className={styles.profession}>Web Developer / Photographer</span>
+                    </div>
+                    <div className={styles.divSocialNetworks}>
+                        <div className={styles.div__icons}>
+                            <Link href={github}     target="_blank"><a className={styles.a}><Image src={ICON__github}     width={iconSize} height={iconSize}  alt="icon-github"    /></a></Link>
+                            <Link href={instagram}  target="_blank"><a className={styles.a}><Image src={ICON__instagram}  width={iconSize} height={iconSize}  alt="icon-instagram" /></a></Link>
+                            <Link href={linkedin}   target="_blank"><a className={styles.a}><Image src={ICON__linkedin}   width={iconSize} height={iconSize}  alt="icon-linkedin"  /></a></Link>
+                            <Link href={twitter}    target="_blank"><a className={styles.a}><Image src={ICON__twitter}    width={iconSize} height={iconSize}  alt="icon-twitter"   /></a></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

@@ -4,6 +4,7 @@ exports.variablesGlobal = {
     siteTitleDesc : 'Meu portfólio - (NyctibiusVII)',
     author        : 'Matheus Vidigal',
     nickname      : 'NyctibiusVII',
+    authorPlusNickName : 'Matheus Vidigal - (NyctibiusVII)',
     tel           : '(11) 97132-1587',
     copyright     : 'copyright © 2020 Matheus Vidigal - @NyctibiusVII',
     description   : 'Este site foi criado por mim para a criação do meu portfólio, nele tenho o intuito de mostrar mais o meu lado profissional e minha disciplina com a programação.',
@@ -19,6 +20,7 @@ exports.srcLinks = {
     __About    : '/about',
     __Contact  : '/contact',
     //Logo
+    __ImgProfile                       : '/imgProfile'              +'.jpg',
     __Logo                             : '/logo'                    +'.png',
     __LogoIcon                         : '/logo-icon'               +'.png',
     __MiniLogoIcon                     : '/mini-logo-icon'          +'.svg',
@@ -39,6 +41,11 @@ exports.srcLinks = {
     __discord          : '/discord.svg',
     __email_dev        : '/email.svg',
     __donate           : '/donate.svg', // - Picpay
+    //icons redeS SIMPLE
+    __githubSimple           : '/githubSimple.svg',
+    __instagramSimple        : '/instagramSimple.svg',
+    __linkedinSimple         : '/linkedinSimple.svg',
+    __twitterSimple          : '/twitterSimple.svg',
 }
 //const https = 'https://'
 exports.links = {

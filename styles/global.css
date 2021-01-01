@@ -17,6 +17,17 @@
   --subsub-topBar-nav-color-background: #1F1F27;/**1F1F27 */
   --subsub-topBar-nav-color-background-secondary: #eeeeee;
 
+
+
+  --topBar-nav-color-background-light-custom: #FF4108;
+  --topBar-nav-color-background-custom: #ff5722;
+  --topBar-nav-color-background-dark-custom: #E64C1E;
+
+  --topBar-nav-color-background-invisible: #ffffff00;
+
+  --subsub-topBar-nav-color-background-custom: #FF4108;
+  --subsub-topBar-nav-color-background-secondary-custom: #eeeeee;
+
   /*FOOTER*/
   --footer-color-background: #0d0d11;
   --footer-text-color-background: #eeeeee;
