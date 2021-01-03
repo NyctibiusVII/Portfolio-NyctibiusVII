@@ -14,11 +14,16 @@ exports.variablesGlobal = {
     `,
 }
 exports.srcLinks = {
-    //Pages
+    //Main Pages
     __Home     : '/',
     __Projects : '/projects',
     __About    : '/about',
     __Contact  : '/contact',
+    //Projects Pages
+    __DiaNoiteJS : '/projects/DiaNoiteJS',
+    __Laser_SS   : '/projects/Laser-Security-System',
+    __NLW_2      : '/projects/NLW-2',
+    __NLW_3      : '/projects/NLW-3',
     //Logo
     __ImgProfile                       : '/imgProfile'              +'.jpg',
     __Logo                             : '/logo'                    +'.png',
