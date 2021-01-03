@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/NyctibiusVII/Portfolio-NyctibiusVII#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "next": "^10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

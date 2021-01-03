@@ -13,6 +13,7 @@ export default function Projects() {
     return (
         <>
             <TopNav/>
+            
             <span>projetos</span>
             <br></br><br></br>
             <nav className={[styles.nav, animations.animate_appear].join(' ')}>
